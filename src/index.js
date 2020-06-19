@@ -6,12 +6,15 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter } from "react-router-dom";
 import UserProvider from './providers/UserProvider';
+import FoodProvider from './providers/FoodProvider';
 
 ReactDOM.render(
   <UserProvider>
+  <FoodProvider>
   <BrowserRouter>
     <App />
   </BrowserRouter>
+  </FoodProvider>
   </UserProvider>,
   document.getElementById('root')
 );

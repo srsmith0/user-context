@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Form, Button } from 'semantic-ui-react';
 import { UserContext } from '../providers/UserProvider';
 
-function AccountForm () {
+function UserForm () {
   const user = useContext(UserContext)
   const [email, setEmail] = useState('')
   const [fname, setFname] = useState('')
@@ -16,19 +16,19 @@ function AccountForm () {
 
   return(
     <Form onSubmit={onSubmit}>
-      <Form.Input 
+      <Form.Input style={inputStyle} 
         label="Email"
         name= "email"
         value= {email}
         onChange={(e) => setEmail(e.target.value)} 
       />
-      <Form.Input 
+      <Form.Input style={inputStyle} 
         label="First Name"
         name= "fname"
         value= {fname}
         onChange={(e) => setFname(e.target.value)} 
       />
-      <Form.Input 
+      <Form.Input style={inputStyle} 
         label="Last Name"
         name= "lname"
         value= {lname}
@@ -39,4 +39,8 @@ function AccountForm () {
   )
 }
 
-export default AccountForm;
+export default UserForm;
+
+const inputStyle = {
+  width: '50%'
+}

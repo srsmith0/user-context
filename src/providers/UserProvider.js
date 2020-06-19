@@ -9,7 +9,7 @@ export default class UserProvider extends React.Component {
     email:'fake@fake.com',
     firstName: 'Shawn',
     lastName: 'Smith',
-    updateUser: (account) => this.updateUser(account)
+    updateUser: (account) => this.updateUser(account),
   }
 
   updateUser (account) {
