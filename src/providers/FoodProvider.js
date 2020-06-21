@@ -8,22 +8,27 @@ export default class FoodProvider extends React.Component {
   state = [
     {name: "Banana",
     group: "Fruit",
-    updateFood: (food) => this.updateFood(food)
+    description: "Yellow and tasty",
+    addFood: (food) => this.setState([food, ...this.state])
   },
   {
     name: "Pumpkin Bread",
     group: "Grain",
-    updateFood: (food) => this.updateFood(food)
+    description: "Seasonal and basic",
   },
   {
-    name: "Enchiladas",
+    name: "Tamales",
     group: "Many",
-    updateFood: (food) => this.updateFood(food)
-  }
+    description: "Corn flavor, moist, delicious",
+  },
   ]
 
   updateFood(food){
     this.setState({...food})
+  }
+
+  addFood(food) {
+    this.setState([food, ...this.state])
   }
 
   render () {

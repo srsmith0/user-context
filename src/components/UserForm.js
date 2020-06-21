@@ -34,7 +34,7 @@ function UserForm () {
         value= {lname}
         onChange={(e) => setLname(e.target.value)} 
       />
-      <Button color="purple">Submit!</Button>
+      <Button color="purple">Update</Button>
     </Form>
   )
 }

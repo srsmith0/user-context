@@ -1,7 +1,16 @@
 import React from 'react';
+import Foods from './Foods';
+import FoodForm from './FoodForm';
+
 
 export default function FoodList () {
-  return(
-    <h1>oh hi!</h1>
+
+  return (
+    <div>
+    <Foods />
+    <FoodForm />
+    </div>
+    
   )
 }
+
